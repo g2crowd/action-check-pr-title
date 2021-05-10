@@ -19,4 +19,6 @@ exports.run = () => {
   if (!regex.test(pullRequestTitle)) {
     core.setFailed(`Pull Request title "${pullRequestTitle}" failed to pass match regex - ${regex}`);
   }
+
+  core.setOutput("prTitle", pullRequestTitle);
 };
